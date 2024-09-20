@@ -1,42 +1,4 @@
 
-// import axios from 'axios';
-// // import dotenv from 'dotenv';
-
-// // dotenv.config();
-
-// const API_URL = process.env.REACT_APP_API_URL;
-// console.log(API_URL);
-
-//  export const fetchHurricaneTrackingData(location) {
-//     const url = API_URL;
-
-//     try {
-//         const response = await axios.post(url, { location }); // Pass location in the request body
-//         if (!response.status === 200) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-//         return response.data; // Access the data directly from axios response
-//     } catch (error) {
-//         console.error('Error fetching hurricane tracking data:', error);
-//         throw error;
-//     }
-// }
-
-// export const signup(email, password) {
-//     const url = API_URL;
-
-//     try {
-//         const response = await axios.post(url, { email, password });
-//         console.log("User signed up:", response.data);
-//         return response.data;
-//     } catch (error) {
-//         console.error('Error signing up:', error);
-//         throw error;
-//     }
-// }
-
-// // Corrected the export statement
-
 
 
 
@@ -58,6 +20,7 @@ export async function fetchHurricaneTrackingData(location) {
         if (response.status !== 200) { // Corrected the condition
             throw new Error(`HTTP error! status: ${response.status}`);
         }
+        console.log("response received",response.data);
         return response.data; // Access the data directly from axios response
     } catch (error) {
         console.error('Error fetching hurricane tracking data:', error);
